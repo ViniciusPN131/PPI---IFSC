@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de Usuário</h1>
+    <form action="" method="get">
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" name="nome">
+        <br>
+        <label for="mail">email</label>
+        <input id="mail" type="email" name="email">
+        <br>
+        <label for="senha">senha</label>
+        <input id="senha" type="password" name="password">
+        <bre>
+        <label for="csenha">Confirmação Senha</label>
+        <input id="csenha" type="password">
+        <br>
+        <label for="termos">Aceito termos e condições: </label>
+        <input id="termos" type="checkbox" name="termos">
+        <br>
+        
+        
+        <label for="estado"></label>
+        <select name="uf" id="estado" required>
+            <option value="">Selecione</option><br>
+            <option value="RS">RS - Rio Grade do Sul</option>
+            <option value="SC">SC - Santa Catarina</option>
+            <option value="PR">PR - Paraná</option>
+        </select>
+        <label>Genero:</label><br>
+        <label for="masc">Masculino</label>
+        <input type="radio" name="genero" id="masc" value="masc"><br>
+        <label for="fem">Feminino</label>
+        <input type="radio" name="genero" id="fem" value="fem"><br>
+        <label for="Outro">Outro</label>
+        <input type="radio" name="genero" id="" value="outro"><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+    
+</body>
+</html>

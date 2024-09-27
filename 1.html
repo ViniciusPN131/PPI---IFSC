@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Código CSS */
+        h1,
+        p {
+            /*regra de estilo utilizando seletor por elemento*/
+            color: #6a5f5f;
+            border: 1px solid black;
+            border-radius: 10% 20% 30% 20%;
+        }
+
+        #post2 {
+            /*seletor por id*/
+            background-color: rgb(218, 230, 240);
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+
+            border-radius: 10%;
+        }
+
+        #paodealho:hover {
+            background-color: coral;
+            font-size: 30pt;
+        }
+
+        thead {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="post1">
+        <h1> Titulo nível 1 da pagina</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti itaque aut consequuntur nam exercitationem
+            voluptatibus tempore adipisci asperiores, quod culpa impedit nesciunt ipsum tenetur ducimus quisquam,
+            consectetur, molestiae vero sit!</p>
+    </div>
+    <div id="post2">
+        <h1> Titulo nível 1 da pagina</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti itaque aut consequuntur nam exercitationem
+            voluptatibus tempore adipisci asperiores, quod culpa impedit nesciunt ipsum tenetur ducimus quisquam,
+            consectetur, molestiae vero sit!</p>
+    </div>
+    <div id="churrasco">
+        <h1>Lista de colaboradores do churrasco</h1>
+        <ul>
+            <li>Irwyng</li>
+            <li>Edson</li>
+            <li>Ana</li>
+            <li>Isaque</li>
+            <li>Hudson</li>
+
+        </ul>
+        <ol type="A" start="26">
+            <li>Irwyng</li>
+            <li>Edson</li>
+            <li>Ana</li>
+            <li>Isaque</li>
+            <li>Hudson</li>
+
+        </ol>
+
+        <table>
+            <caption>Tabela do Churrasco que vai sair</caption>
+            <thead>
+                <tr>
+                    <td rowspan="5">churrasco</td>
+                    <th>Item</th>
+                    <th>Unidade</th>
+                    <th>Valor</th>
+                </tr>
+
+                <tr>
+                    <td>carne</td>
+                    <td>2kg</td>
+                    <td>36,00</td>
+                </tr>
+            </thead>
+            <tr>
+                <td id="paodealho">pão de alho</td>
+                <td>2 pacotes</td>
+                <td>15,00</td>
+            </tr>
+            <tr>
+                <td>Linguiça</td>
+                <td> 1kg</td>
+                <td>20,00</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+
+                    <td>122,00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+
+
+</body>
+
+</html>
