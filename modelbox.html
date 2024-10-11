@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        p, span{
+            display: inline-block;
+            width: 120px;
+            height: 100px;
+            border: 1px solid black;
+            outline: 1px solid red;
+            outline-offset: 3px;
+            padding: 10px;
+            background-color: palevioletred;
+            background-image: url("GatoFoda.jfif");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            
+        }
+        .container{
+          position: static;  
+          margin-top: 100px;
+
+        }
+        
+        p:nth-child(1){
+            border-radius: 50%;
+            position: relative;
+            top: 100px;
+            left:100px;
+        }
+        p:nth-child(2){
+            position: absolute;
+            left: 50%;
+            top: 150px;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        p:nth-child(3){
+            position: fixed;
+            right: 0px;
+            top: 0px;
+        }
+        span:first-of-type{
+            background-color: greenyellow;
+            top: 50%;
+            left: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <p>Lorem 1</p>
+    <p>Lorem 2</p>
+    <p>Lorem 3</p>
+    <span>Spam 1</span>
+    <span>Spam 2</span>
+    <span>Spam 3</span>
+</div>
+</body>
+</html>
