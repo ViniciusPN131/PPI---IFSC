@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificar Palíndromo</title>
+</head>
+<body>
+    <script>
+        function ehPalindromo(str) {
+            return str === str.split('').reverse().join('');
+        }
+        console.log(ehPalindromo("ana")); // true
+    </script>
+</body>
+</html>

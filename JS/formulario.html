@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Validação de Formulário</title>
+</head>
+<body>
+    <form id="validacaoForm" onsubmit="return validarFormulario();">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <span id="erroNome" style="color:red;"></span><br><br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <span id="erroEmail" style="color:red;"></span><br><br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <span id="erroSenha" style="color:red;"></span><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validarFormulario() {
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let senha = document.getElementById("senha").value;
+            let valido = true;
+
+            document.getElementById("erroNome").innerText = "";
+            document.getElementById("erroEmail").innerText = "";
+            document.getElementById("erroSenha").innerText = "";
+
+            if (nome.length <= 3) {
+                document.getElementById("erroNome").innerText = "O nome deve ter mais de 3 caracteres.";
+                valido = false;
+            }
+            if (!email.includes("@")) {
+                document.getElementById("erroEmail").innerText = "O e-mail deve conter '@'.";
+                valido = false;
+            }
+            if (senha.length <= 6) {
+                document.getElementById("erroSenha").innerText = "A senha deve ter mais de 6 caracteres.";
+                valido = false;
+            }
+
+            return valido;
+        }
+    </script>
+</body>
+</html>
