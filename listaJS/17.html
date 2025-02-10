@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 17</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    .cor {
+      width: 150px;
+      height: 100px;
+      display: inline-block;
+      margin: 10px;
+      color: white;
+      font-weight: bold;
+      line-height: 100px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <p>Pressione a tecla ESPAÇO para mudar as cores.</p>
+  <div class="cor" id="bar1" style="background-color: #05668D;">05668D</div>
+  <div class="cor" id="bar2" style="background-color: #427AA1;">427AA1</div>
+  <div class="cor" id="bar3" style="background-color: #EBF2FA;">EBF2FA</div>
+  <div class="cor" id="bar4" style="background-color: #679436;">679436</div>
+  <div class="cor" id="bar5" style="background-color: #A5BE00;">A5BE00</div>
+
+  <script>
+    function gerarCorAleatoria() {
+      return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+    }
+
+    function atualizarCores() {
+      document.querySelectorAll('.cor').forEach(barra => {
+        let novaCor = gerarCorAleatoria();
+        barra.style.backgroundColor = novaCor;
+        barra.textContent = novaCor.slice(1).toUpperCase();
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === ' ') {
+        atualizarCores();
+      }
+    });
+  </script>
+</body>
+</html>

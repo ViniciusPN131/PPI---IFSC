@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 15</title>
+    <style>
+        #class{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+        #bt{
+            min-height: 50px;
+            min-width: 100px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="class">
+        <label for="" id="lmin">Mínimo</label>
+        <input type="text" id="min">
+        <label for="" id="lmax">Máximo</label>
+        <input type="text" id="max">
+        <button id="bt">Sortear</button>
+        <label for="" id="numAleatorio">a</label>
+    </div>
+    <script>
+        let bt = document.getElementById("bt");
+        let resultado = document.getElementById("numAleatorio");
+
+        bt.addEventListener("click",clickar);
+        function clickar(){
+            let min = Number.parseFloat(document.getElementById("min").value);
+            let max = Number.parseFloat(document.getElementById("max").value);
+            let numAle = Math.random();
+            let result = Math.round(Math.random()*(max-min)+min);
+            resultado.innerText = result;
+        }
+    </script>
+</body>
+</html>
