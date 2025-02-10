@@ -1,4 +1,4 @@
 {
-    "phpserver.phpConfigPath": "",
-    "phpserver.phpPath": ""
+    "phpserver.phpConfigPath": "C:\\xampp\\php\\php.ini",
+    "phpserver.phpPath": "C:\\xampp\\php\\php.exe"
 }
